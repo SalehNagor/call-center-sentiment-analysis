@@ -158,10 +158,6 @@ const FileUploadZone = ({ onFilesAdded }) => {
           <div className="mt-6 pt-6 border-t border-border w-full">
             <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Icon name="FileAudio" size={16} />
-                <span>MP3, WAV, M4A</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Icon name="HardDrive" size={16} />
                 <span>Max 50MB per file</span>
               </div>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from '../../components/ui/Header';
 import RecordingInterface from './components/RecordingInterface';
 import FileUploadZone from './components/FileUploadZone';
-import ProcessingQueue from './components/ProcessingQueue';
 import RecentAnalysis from './components/RecentAnalysis';
 import Icon from '../../components/AppIcon';
 
@@ -110,61 +109,7 @@ const VoiceAnalysisHub = () => {
             </div>
 
             <div className="lg:col-span-7 space-y-6">
-              <ProcessingQueue 
-                queueItems={queueItems} 
-                onItemComplete={handleItemComplete}
-              />
               <RecentAnalysis analyses={completedAnalyses} />
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-card rounded-lg border border-border p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg">
-                  <Icon name="Activity" size={20} color="var(--color-primary)" />
-                </div>
-                <h3 className="text-sm font-medium text-foreground">Processing Speed</h3>
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-foreground">2.3x</span>
-                <span className="text-sm text-muted-foreground">faster than real-time</span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">
-                Average processing time: 1 minute per 2.3 minutes of audio
-              </p>
-            </div>
-
-            <div className="bg-card rounded-lg border border-border p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 bg-success/10 rounded-lg">
-                  <Icon name="Target" size={20} color="var(--color-success)" />
-                </div>
-                <h3 className="text-sm font-medium text-foreground">Accuracy Rate</h3>
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-foreground">94.2%</span>
-                <span className="text-sm text-success">+2.1%</span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">
-                Sentiment classification accuracy across all analyses
-              </p>
-            </div>
-
-            <div className="bg-card rounded-lg border border-border p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 bg-warning/10 rounded-lg">
-                  <Icon name="FileAudio" size={20} color="var(--color-warning)" />
-                </div>
-                <h3 className="text-sm font-medium text-foreground">Files Processed</h3>
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-foreground">1,247</span>
-                <span className="text-sm text-muted-foreground">this month</span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">
-                Total audio files analyzed in December 2025
-              </p>
             </div>
           </div>
         </div>

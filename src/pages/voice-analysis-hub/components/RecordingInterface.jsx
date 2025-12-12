@@ -191,7 +191,7 @@ const RecordingInterface = ({ onRecordingComplete }) => {
               Click the microphone to start recording
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Supported formats: WAV, MP3 • Max duration: 30 minutes
+              Max duration: 30 minutes
             </p>
           </div>
         )}
