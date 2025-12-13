@@ -3,7 +3,6 @@ import Header from '../../components/ui/Header';
 import MetricCard from './components/MetricCard';
 import FilterPanel from './components/FilterPanel';
 import SentimentHeatmap from './components/SentimentHeatmap';
-import CorrelationMatrix from './components/CorrelationMatrix';
 import SentimentAlertFeed from './components/SentimentAlertFeed';
 import CustomerSentimentTable from './components/CustomerSentimentTable';
 import TopicBubbleChart from './components/TopicBubbleChart';
@@ -64,22 +63,6 @@ const CustomerInsights = () => {
       changeType: 'positive',
       icon: 'TrendingUp',
       iconColor: 'var(--color-primary)'
-    },
-    {
-      title: 'Pattern Recognition Accuracy',
-      value: '94.2%',
-      change: '+1.8%',
-      changeType: 'positive',
-      icon: 'Target',
-      iconColor: 'var(--color-secondary)'
-    },
-    {
-      title: 'Alert Trigger Frequency',
-      value: '18/day',
-      change: '-8.5%',
-      changeType: 'positive',
-      icon: 'Bell',
-      iconColor: 'var(--color-warning)'
     }
   ];
 
@@ -106,7 +89,7 @@ const CustomerInsights = () => {
             onResetFilters={handleResetFilters}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-6">
             {metricsData?.map((metric, index) => (
               <MetricCard key={index} {...metric} />
             ))}
@@ -146,9 +129,7 @@ const CustomerInsights = () => {
             </div>
           </div>
 
-          <div className="mb-6">
-            <CorrelationMatrix />
-          </div>
+          
 
           <div>
             <CustomerSentimentTable />

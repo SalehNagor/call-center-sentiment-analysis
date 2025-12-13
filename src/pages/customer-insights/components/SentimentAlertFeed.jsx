@@ -81,36 +81,13 @@ const SentimentAlertFeed = () => {
   ];
 
   const getSeverityConfig = (severity) => {
-    switch (severity) {
-      case 'critical':
-        return {
-          color: 'text-red-600',
-          bg: 'bg-red-600/10',
-          border: 'border-red-600/50',
-          icon: 'AlertTriangle'
-        };
-      case 'high':
-        return {
-          color: 'text-amber-600',
-          bg: 'bg-amber-500/10',
-          border: 'border-amber-500/50',
-          icon: 'AlertCircle'
-        };
-      case 'medium':
+   
         return {
           color: 'text-primary',
           bg: 'bg-primary/10',
           border: 'border-primary/50',
           icon: 'Info'
         };
-      default:
-        return {
-          color: 'text-muted-foreground',
-          bg: 'bg-muted',
-          border: 'border-border',
-          icon: 'Info'
-        };
-    }
   };
 
   const getStatusConfig = (status) => {
@@ -147,40 +124,7 @@ const SentimentAlertFeed = () => {
           <span>Live</span>
         </div>
       </div>
-      <div className="flex items-center gap-2 mb-4">
-        <button
-          onClick={() => setSelectedSeverity('all')}
-          className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-            selectedSeverity === 'all' ?'bg-primary text-primary-foreground' :'bg-muted text-muted-foreground hover:bg-muted/80'
-          }`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => setSelectedSeverity('critical')}
-          className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-            selectedSeverity === 'critical' ?'bg-destructive text-destructive-foreground' :'bg-muted text-muted-foreground hover:bg-muted/80'
-          }`}
-        >
-          Critical
-        </button>
-        <button
-          onClick={() => setSelectedSeverity('high')}
-          className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-            selectedSeverity === 'high' ?'bg-warning text-warning-foreground' :'bg-muted text-muted-foreground hover:bg-muted/80'
-          }`}
-        >
-          High
-        </button>
-        <button
-          onClick={() => setSelectedSeverity('medium')}
-          className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-            selectedSeverity === 'medium' ?'bg-primary text-primary-foreground' :'bg-muted text-muted-foreground hover:bg-muted/80'
-          }`}
-        >
-          Medium
-        </button>
-      </div>
+     
       <div className="flex-1 overflow-y-auto space-y-3 pr-2">
         {filteredAlerts?.map((alert) => {
           const severityConfig = getSeverityConfig(alert?.severity);
@@ -236,12 +180,10 @@ const SentimentAlertFeed = () => {
                 <p className="text-xs text-foreground">{alert?.recommendedAction}</p>
               </div>
               <div className="flex items-center gap-2">
-                <Button variant="outline" size="xs" iconName="Eye" fullWidth>
+                <Button variant="default" size="xs" iconName="Eye" fullWidth>
                   View Details
                 </Button>
-                <Button variant="default" size="xs" iconName="CheckCircle" fullWidth>
-                  Take Action
-                </Button>
+                
               </div>
             </div>
           );

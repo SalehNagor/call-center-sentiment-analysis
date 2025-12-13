@@ -124,10 +124,6 @@ const LiveActivityFeed = ({ activities }) => {
                 <Icon name="Clock" size={14} />
                 <span>{activity?.duration}</span>
               </div>
-              <div className="flex items-center gap-1">
-                <Icon name="FileAudio" size={14} />
-                <span>{activity?.format}</span>
-              </div>
             </div>
           </div>
         ))}

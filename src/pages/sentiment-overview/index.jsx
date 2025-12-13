@@ -5,12 +5,9 @@ import GlobalControls from './components/GlobalControls';
 import SentimentTimelineChart from './components/SentimentTimelineChart';
 import LiveActivityFeed from './components/LiveActivityFeed';
 import SentimentDistributionChart from './components/SentimentDistributionChart';
-import ExportControls from './components/ExportControls';
 
 const SentimentOverview = () => {
   const [dateRange, setDateRange] = useState('24h');
-  const [customerSegment, setCustomerSegment] = useState('all');
-  const [activeProcessing, setActiveProcessing] = useState(12);
 
   const kpiData = [
     {
@@ -68,7 +65,6 @@ const SentimentOverview = () => {
       transcript: "The customer service representative was extremely helpful and resolved my issue quickly. I\'m very satisfied with the support I received today.",
       timestamp: new Date(Date.now() - 120000),
       duration: "3:45",
-      format: "MP3",
       status: "completed"
     },
     {
@@ -80,7 +76,6 @@ const SentimentOverview = () => {
       transcript: "I called to inquire about my account status. The information provided was accurate, though I expected a bit more detail about the upcoming changes.",
       timestamp: new Date(Date.now() - 300000),
       duration: "2:18",
-      format: "WAV",
       status: "completed"
     },
     {
@@ -92,7 +87,6 @@ const SentimentOverview = () => {
       transcript: "I\'ve been waiting for over 20 minutes and still haven\'t received a clear answer to my question. This is frustrating and unprofessional.",
       timestamp: new Date(Date.now() - 480000),
       duration: "5:32",
-      format: "M4A",
       status: "completed"
     },
     {
@@ -104,7 +98,6 @@ const SentimentOverview = () => {
       transcript: "Excellent experience! The agent went above and beyond to help me understand the new features. Very impressed with the level of service.",
       timestamp: new Date(Date.now() - 720000),
       duration: "4:12",
-      format: "MP3",
       status: "completed"
     },
     {
@@ -116,7 +109,6 @@ const SentimentOverview = () => {
       transcript: "Quick resolution to my billing inquiry. The representative was knowledgeable and courteous throughout the entire conversation.",
       timestamp: new Date(Date.now() - 900000),
       duration: "2:56",
-      format: "WAV",
       status: "completed"
     },
     {
@@ -128,7 +120,6 @@ const SentimentOverview = () => {
       transcript: "This is absolutely unacceptable! I\'ve called three times about the same issue and still no resolution. I want to speak with a supervisor immediately!",
       timestamp: new Date(Date.now() - 1200000),
       duration: "4:45",
-      format: "MP3",
       status: "completed"
     },
     {
@@ -140,7 +131,6 @@ const SentimentOverview = () => {
       transcript: "Standard interaction about delivery timeframe. Information was provided as expected. No complaints but nothing exceptional either.",
       timestamp: new Date(Date.now() - 1500000),
       duration: "3:12",
-      format: "WAV",
       status: "processing"
     }
   ];
@@ -152,21 +142,10 @@ const SentimentOverview = () => {
     { name: "angry", value: 142, percentage: 5.0 }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveProcessing(prev => Math.max(8, Math.min(20, prev + Math.floor(Math.random() * 5) - 2)));
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
+  
 
   const handleDrillDown = (sentiment) => {
     console.log(`Drilling down into ${sentiment} sentiment transcripts`);
-  };
-
-  const handleExport = async (format) => {
-    console.log(`Exporting dashboard data as ${format}`);
-    return new Promise(resolve => setTimeout(resolve, 1000));
   };
 
   return (
@@ -182,9 +161,6 @@ const SentimentOverview = () => {
           <GlobalControls
             dateRange={dateRange}
             onDateRangeChange={setDateRange}
-            customerSegment={customerSegment}
-            onCustomerSegmentChange={setCustomerSegment}
-            activeProcessing={activeProcessing}
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -208,8 +184,6 @@ const SentimentOverview = () => {
               onDrillDown={handleDrillDown}
             />
           </div>
-
-          <ExportControls onExport={handleExport} />
         </div>
       </main>
       <style jsx>{`
