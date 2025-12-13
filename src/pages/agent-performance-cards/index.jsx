@@ -17,7 +17,6 @@ const AgentPerformanceCards = () => {
       department: 'support',
       avatar: '/avatars/sarah.jpg',
       isOnline: true,
-      load: 'low',
       ticketsSolved: 178,
       ticketsTrend: 15,
       fcrRate: 91,
@@ -25,8 +24,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 7.2,
       openTickets: 3,
       performanceScore: 89,
-      csatScore: 94,
-      badges: ['Sales Champion', 'Speed Master']
+      csatScore: 94
     },
     {
       id: 2,
@@ -35,7 +33,6 @@ const AgentPerformanceCards = () => {
       department: 'technical',
       avatar: '/avatars/michael.jpg',
       isOnline: true,
-      load: 'medium',
       ticketsSolved: 156,
       ticketsTrend: 8,
       fcrRate: 87,
@@ -43,8 +40,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 9.5,
       openTickets: 7,
       performanceScore: 85,
-      csatScore: 91,
-      badges: ['Problem Solver', 'Tech Expert']
+      csatScore: 91
     },
     {
       id: 3,
@@ -53,7 +49,6 @@ const AgentPerformanceCards = () => {
       department: 'sales',
       avatar: '/avatars/emily.jpg',
       isOnline: false,
-      load: 'low',
       ticketsSolved: 203,
       ticketsTrend: 22,
       fcrRate: 95,
@@ -61,8 +56,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 5.8,
       openTickets: 2,
       performanceScore: 94,
-      csatScore: 96,
-      badges: ['Top Performer', 'Customer Favorite']
+      csatScore: 96
     },
     {
       id: 4,
@@ -71,7 +65,6 @@ const AgentPerformanceCards = () => {
       department: 'support',
       avatar: '/avatars/james.jpg',
       isOnline: true,
-      load: 'high',
       ticketsSolved: 142,
       ticketsTrend: -5,
       fcrRate: 82,
@@ -79,8 +72,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 11.3,
       openTickets: 15,
       performanceScore: 76,
-      csatScore: 85,
-      badges: ['Reliable']
+      csatScore: 85
     },
     {
       id: 5,
@@ -89,7 +81,6 @@ const AgentPerformanceCards = () => {
       department: 'billing',
       avatar: '/avatars/lisa.jpg',
       isOnline: true,
-      load: 'medium',
       ticketsSolved: 167,
       ticketsTrend: 12,
       fcrRate: 89,
@@ -97,8 +88,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 8.1,
       openTickets: 5,
       performanceScore: 88,
-      csatScore: 92,
-      badges: ['Accuracy Expert', 'Fast Resolver']
+      csatScore: 92
     },
     {
       id: 6,
@@ -107,7 +97,6 @@ const AgentPerformanceCards = () => {
       department: 'technical',
       avatar: '/avatars/david.jpg',
       isOnline: true,
-      load: 'low',
       ticketsSolved: 189,
       ticketsTrend: 18,
       fcrRate: 93,
@@ -115,8 +104,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 6.9,
       openTickets: 4,
       performanceScore: 92,
-      csatScore: 95,
-      badges: ['Tech Wizard', 'Quick Response']
+      csatScore: 95
     },
     {
       id: 7,
@@ -125,7 +113,6 @@ const AgentPerformanceCards = () => {
       department: 'support',
       avatar: '/avatars/jennifer.jpg',
       isOnline: false,
-      load: 'medium',
       ticketsSolved: 151,
       ticketsTrend: 7,
       fcrRate: 86,
@@ -133,8 +120,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 9.8,
       openTickets: 6,
       performanceScore: 84,
-      csatScore: 89,
-      badges: ['Consistent Performer']
+      csatScore: 89
     },
     {
       id: 8,
@@ -143,7 +129,6 @@ const AgentPerformanceCards = () => {
       department: 'sales',
       avatar: '/avatars/robert.jpg',
       isOnline: true,
-      load: 'high',
       ticketsSolved: 195,
       ticketsTrend: 20,
       fcrRate: 92,
@@ -151,8 +136,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 7.5,
       openTickets: 12,
       performanceScore: 90,
-      csatScore: 94,
-      badges: ['Sales Leader', 'Deal Closer', 'Mentor']
+      csatScore: 94
     },
     {
       id: 9,
@@ -161,7 +145,6 @@ const AgentPerformanceCards = () => {
       department: 'support',
       avatar: '/avatars/amanda.jpg',
       isOnline: true,
-      load: 'low',
       ticketsSolved: 172,
       ticketsTrend: 14,
       fcrRate: 90,
@@ -169,8 +152,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 7.8,
       openTickets: 3,
       performanceScore: 87,
-      csatScore: 93,
-      badges: ['Rising Star', 'Customer Care']
+      csatScore: 93
     },
     {
       id: 10,
@@ -179,7 +161,6 @@ const AgentPerformanceCards = () => {
       department: 'billing',
       avatar: '/avatars/kevin.jpg',
       isOnline: true,
-      load: 'medium',
       ticketsSolved: 159,
       ticketsTrend: 10,
       fcrRate: 88,
@@ -187,8 +168,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 8.7,
       openTickets: 7,
       performanceScore: 86,
-      csatScore: 90,
-      badges: ['Detail Oriented']
+      csatScore: 90
     },
     {
       id: 11,
@@ -197,7 +177,6 @@ const AgentPerformanceCards = () => {
       department: 'technical',
       avatar: '/avatars/jessica.jpg',
       isOnline: false,
-      load: 'low',
       ticketsSolved: 181,
       ticketsTrend: 16,
       fcrRate: 91,
@@ -205,8 +184,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 7.4,
       openTickets: 4,
       performanceScore: 89,
-      csatScore: 92,
-      badges: ['Problem Solver', 'Technical Expert']
+      csatScore: 92
     },
     {
       id: 12,
@@ -215,7 +193,6 @@ const AgentPerformanceCards = () => {
       department: 'sales',
       avatar: '/avatars/christopher.jpg',
       isOnline: true,
-      load: 'medium',
       ticketsSolved: 187,
       ticketsTrend: 19,
       fcrRate: 93,
@@ -223,8 +200,7 @@ const AgentPerformanceCards = () => {
       avgHandleTime: 6.5,
       openTickets: 5,
       performanceScore: 91,
-      csatScore: 95,
-      badges: ['Top Seller', 'Revenue Generator']
+      csatScore: 95
     }
   ];
 
@@ -259,9 +235,7 @@ const AgentPerformanceCards = () => {
     console.log('View details for agent:', agent?.name);
   };
 
-  const handleAssignTicket = (agent) => {
-    console.log('Assign ticket to agent:', agent?.name);
-  };
+  
 
   const stats = useMemo(() => {
     const totalAgents = filteredAgents?.length || 0;
@@ -354,7 +328,6 @@ const AgentPerformanceCards = () => {
                   key={agent?.id}
                   agent={agent}
                   onViewDetails={handleViewDetails}
-                  onAssignTicket={handleAssignTicket}
                 />
               ))
             ) : (

@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
-import { Checkbox } from '../../../components/ui/Checkbox';
 import Button from '../../../components/ui/Button';
 
-const AgentCard = ({ agent, onViewDetails, onAssignTicket }) => {
-  const [isSelected, setIsSelected] = useState(false);
+const AgentCard = ({ agent, onViewDetails }) => {
+  const [isSelected] = useState(false);
 
-  const getLoadBadgeStyle = (load) => {
-    const styles = {
-      low: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
-      medium: 'bg-amber-500/10 text-amber-500 border-amber-500/20',
-      high: 'bg-rose-500/10 text-rose-500 border-rose-500/20'
-    };
-    return styles?.[load] || styles?.low;
-  };
+
 
   const getTrendIcon = (trend) => {
     if (trend > 0) return { name: 'TrendingUp', color: 'rgb(16 185 129)' };
@@ -65,20 +57,8 @@ const AgentCard = ({ agent, onViewDetails, onAssignTicket }) => {
             <p className="text-slate-400 text-sm">{agent?.role}</p>
           </div>
         </div>
-        <Checkbox
-          checked={isSelected}
-          onChange={(e) => setIsSelected(e?.target?.checked)}
-          className="cursor-pointer"
-        />
       </div>
-      {/* Load Badge */}
-      <div className="mb-4">
-        <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${getLoadBadgeStyle(agent?.load)}`}>
-          {agent?.load === 'low' && 'Low Load'}
-          {agent?.load === 'medium' && 'Medium Load'}
-          {agent?.load === 'high' && 'High Load'}
-        </span>
-      </div>
+
       {/* Key Metrics Grid */}
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-3">
@@ -152,31 +132,13 @@ const AgentCard = ({ agent, onViewDetails, onAssignTicket }) => {
           </div>
         </div>
 
-        {/* Badges */}
-        <div className="flex flex-wrap gap-2">
-          {agent?.badges?.map((badge, index) => (
-            <span
-              key={index}
-              className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-slate-700/50 text-slate-300 border border-slate-600"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
-
         {/* Action Buttons */}
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 gap-2">
           <Button
             onClick={() => onViewDetails?.(agent)}
             className="w-full bg-transparent border border-slate-600 text-slate-300 hover:bg-slate-700 hover:border-slate-500"
           >
             View Details
-          </Button>
-          <Button
-            onClick={() => onAssignTicket?.(agent)}
-            className="w-full bg-blue-600 hover:bg-blue-500 text-white border-0"
-          >
-            Assign Ticket
           </Button>
         </div>
       </div>
