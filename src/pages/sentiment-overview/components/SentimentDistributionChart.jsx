@@ -123,15 +123,7 @@ const SentimentDistributionChart = ({ data, onDrillDown }) => {
               
               <div className="flex items-center justify-between text-xs text-muted-foreground">
                 <span>{item?.value?.toLocaleString()} interactions</span>
-                <button 
-                  className="text-primary hover:underline"
-                  onClick={(e) => {
-                    e?.stopPropagation();
-                    onDrillDown && onDrillDown(item?.name);
-                  }}
-                >
-                  View transcripts →
-                </button>
+                
               </div>
             </div>
           ))}

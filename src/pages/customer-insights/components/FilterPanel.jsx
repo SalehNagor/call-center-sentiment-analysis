@@ -84,13 +84,7 @@ const FilterPanel = ({ filters, onFilterChange, onApplyFilters, onResetFilters }
         />
       </div>
       <div className="flex items-center justify-end gap-3">
-        <Button 
-          variant="outline" 
-          size="sm"
-          iconName="Download"
-        >
-          Export Data
-        </Button>
+        
         <Button 
           variant="default" 
           size="sm"
