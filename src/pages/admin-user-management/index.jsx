@@ -17,7 +17,7 @@ const AdminUserManagement = () => {
       name: 'Sarah Mitchell',
       email: 'sarah.mitchell@company.com',
       avatar: 'https://i.pravatar.cc/150?img=1',
-      role: 'Admin',
+      role: 'Agent',
       status: 'active',
       lastActive: '2 hours ago'
     },
@@ -26,7 +26,7 @@ const AdminUserManagement = () => {
       name: 'Michael Chen',
       email: 'michael.chen@company.com',
       avatar: 'https://i.pravatar.cc/150?img=12',
-      role: 'Supervisor',
+      role: 'Agent',
       status: 'active',
       lastActive: '5 minutes ago'
     },
@@ -53,7 +53,7 @@ const AdminUserManagement = () => {
       name: 'Lisa Anderson',
       email: 'lisa.anderson@company.com',
       avatar: 'https://i.pravatar.cc/150?img=9',
-      role: 'Supervisor',
+      role: 'Agent',
       status: 'active',
       lastActive: '30 minutes ago'
     },
@@ -71,7 +71,7 @@ const AdminUserManagement = () => {
       name: 'Jennifer White',
       email: 'jennifer.white@company.com',
       avatar: 'https://i.pravatar.cc/150?img=10',
-      role: 'Admin',
+      role: 'Agent',
       status: 'active',
       lastActive: '15 minutes ago'
     },

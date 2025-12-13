@@ -33,20 +33,6 @@ const ActionToolbar = ({ onSearch, onRoleFilter, onAddUser }) => {
           </div>
         </div>
 
-        {/* Role Filter */}
-        <div className="w-full md:w-48">
-          <Select
-            className="bg-slate-900 border-slate-700 text-white w-full"
-            onChange={handleRoleChange}
-            defaultValue="all"
-          >
-            <option value="all">All Roles</option>
-            <option value="Admin">Admin</option>
-            <option value="Supervisor">Supervisor</option>
-            <option value="Agent">Agent</option>
-          </Select>
-        </div>
-
         {/* Add User Button */}
         <Button
           onClick={onAddUser}

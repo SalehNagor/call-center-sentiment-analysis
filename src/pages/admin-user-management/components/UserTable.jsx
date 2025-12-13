@@ -21,10 +21,10 @@ const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
                 User
               </th>
               <th className="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Role
+                
               </th>
               <th className="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Status
+                Role
               </th>
               <th className="px-6 py-4 text-left text-xs font-semibold text-slate-400 uppercase tracking-wider">
                 Last Active
@@ -60,6 +60,10 @@ const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
                     </div>
                   </td>
 
+                  {/* Status Column */}
+                  <td className="px-6 py-4">
+                  </td>
+
                   {/* Role Column */}
                   <td className="px-6 py-4">
                     <span 
@@ -67,22 +71,6 @@ const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
                     >
                       {user?.role}
                     </span>
-                  </td>
-
-                  {/* Status Column */}
-                  <td className="px-6 py-4">
-                    <button
-                      onClick={() => onToggleStatus?.(user?.id)}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        user?.status === 'active' ? 'bg-emerald-500' : 'bg-slate-600'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          user?.status === 'active' ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
                   </td>
 
                   {/* Last Active Column */}
