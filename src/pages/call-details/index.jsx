@@ -196,15 +196,11 @@ const CallDetails = () => {
                 <p className="text-xs text-muted-foreground mt-1">{callData?.confidence}% confidence</p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground mb-1">Call Details</p>
+                <p className="text-sm text-muted-foreground mb-1">Call Duration</p>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="flex items-center gap-1">
                     <Icon name="Clock" size={14} className="text-muted-foreground" />
                     <span className="text-foreground">{callData?.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Icon name="FileAudio" size={14} className="text-muted-foreground" />
-                    <span className="text-foreground">{callData?.format}</span>
                   </div>
                 </div>
               </div>
